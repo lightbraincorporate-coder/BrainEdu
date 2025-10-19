@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ app_name }} - Tableau de bord</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+</head>
+<body>
+  <main class="container">
+    <h1>{{ app_name }}</h1>
+    <p><strong>Statut Gmail:</strong> {{ gmail_status }}</p>
+    <div>
+      <a href="/oauth"><button>Connecter Gmail (OAuth)</button></a>
+    </div>
+
+    <h3>Vérification manuelle</h3>
+    <form method="POST" action="/verify">
+      <label>Indice utilisateur (nom/ID)
+        <input type="text" name="user_hint" placeholder="ex: utilisateur: JohnDoe" />
+      </label>
+      <label>Montant
+        <input type="number" step="0.01" name="amount" placeholder="ex: 50" />
+      </label>
+      <label>ID transaction
+        <input type="text" name="tx_id" placeholder="ex: 6773613622" />
+      </label>
+      <button type="submit">Vérifier</button>
+    </form>
+  </main>
+</body>
+</html>

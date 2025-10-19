@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+.env
+.venv/
+venv/
+.env.local
+
+# Credentials
+credentials.json
+token.json
+
+# Logs
+logs/*.log
+
+# Cache / data
+.data/
+.cache/
+.tmp/
+
+# Node leftovers (if any)
+node_modules/

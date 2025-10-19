@@ -1,0 +1,33 @@
+{
+  "app_name": "PaymentVerifierAI",
+  "gmail": {
+    "token_path": "token.json",
+    "credentials_path": "credentials.json",
+    "scopes": [
+      "https://www.googleapis.com/auth/gmail.readonly",
+      "https://www.googleapis.com/auth/gmail.send"
+    ],
+    "watch_query": "in:inbox newer_than:7d"
+  },
+  "verification": {
+    "amount_tolerance_pct": 1.0,
+    "time_window_hours": 168
+  },
+  "llm": {
+    "provider": "openai",
+    "model": "gpt-4o-mini",
+    "api_key_env": "OPENAI_API_KEY",
+    "timeout_s": 20
+  },
+  "ocr": {
+    "tesseract_lang": "eng+fra"
+  },
+  "scheduler": {
+    "enabled": true,
+    "interval_minutes": 5
+  },
+  "logging": {
+    "file": "logs/payments.log",
+    "level": "INFO"
+  }
+}
